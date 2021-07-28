@@ -5,7 +5,7 @@ Syntax highlighting support for Phoenix templates.
 ## Features
 
   * Support syntax highlighting for `.heex` files
-  * Extends Elixir's syntax highlighting to support HEEx's syntax inside `~F`
+  * Extends Elixir's syntax highlighting to support HEEx's syntax inside `~H`
 
 ## License
 
