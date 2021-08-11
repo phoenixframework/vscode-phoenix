@@ -6,13 +6,7 @@
   ],
   "patterns": [
     {
-      "include": "text.html.basic#xml-processing"
-    },
-    {
-      "include": "text.html.basic#doctype"
-    },
-    {
-      "include": "text.html.basic#cdata"
+      "include": "#doctype"
     },
     {
       "include": "#html-comment"
@@ -37,6 +31,36 @@
     }
   ],
   "repository": {
+    "doctype": {
+      "begin": "<!(?=(?i:DOCTYPE\\s))",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.begin.html"
+        }
+      },
+      "end": ">",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "name": "meta.tag.metadata.doctype.html",
+      "patterns": [
+        {
+          "match": "\\G(?i:DOCTYPE)",
+          "name": "entity.name.tag.html"
+        },
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.html"
+        },
+        {
+          "match": "[^\\s>]+",
+          "name": "entity.other.attribute-name.html"
+        }
+      ]
+    },
     "expression": {
       "patterns": [
         {
