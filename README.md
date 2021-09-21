@@ -2,6 +2,10 @@
 
 Syntax highlighting support for Phoenix templates.
 
+## Manual Install
+  * Verify your VS code's extensions path. `~/.vscode/extensions/`
+  * git clone repo `git -C ~/.vscode/extensions/ clone https://github.com/phoenixframework/vscode-phoenix.git`
+
 ## Features
 
   * Support syntax highlighting for `.heex` files
