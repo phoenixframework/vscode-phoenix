@@ -1,4 +1,4 @@
-# Phoenix package for VS Code (WIP)
+# Phoenix package for VS Code
 
 Syntax highlighting support for Phoenix templates.
 

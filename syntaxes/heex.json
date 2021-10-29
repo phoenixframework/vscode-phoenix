@@ -18,6 +18,9 @@
       "include": "#elixir-embedded"
     },
     {
+      "include": "#slotable"
+    },
+    {
       "include": "#component"
     },
     {
@@ -178,6 +181,33 @@
             },
             "2": {
               "name": "entity.name.type.module.elixir"
+            }
+          },
+          "end": "((?: ?/)?>)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#node-attributes"
+            }
+          ]
+        }
+      ]
+    },
+    "slotable": {
+      "patterns": [
+        {
+          "name": "meta.tag.other.unrecognized.html.derivative",
+          "begin": "(</?)(\\:[^\\s>]*)(?<!/)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.other.attribute-name.slot.surface"
             }
           },
           "end": "((?: ?/)?>)",
