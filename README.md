@@ -7,6 +7,16 @@ Syntax highlighting support for Phoenix templates.
   * Support syntax highlighting for `.heex` files
   * Extends Elixir's syntax highlighting to support HEEx's syntax inside `~H`
 
+## Emmet Support 
+
+To use emmet with `.heex` file extensions, add the options below to your settings:
+
+```json
+"emmet.includeLanguages": {
+  "phoenix-heex": "html"
+}
+```
+
 ## License
 
 Copyright (c) 2021, Marlus Saraiva.
