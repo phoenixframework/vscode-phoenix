@@ -43,7 +43,10 @@
                 "path": "./syntaxes/elixir-heex.json",
                 "injectTo": [
                     "source.elixir"
-                ]
+                ],
+                "embeddedLanguages": {
+                    "text.html.heex": "phoenix-heex"
+                }
             }
         ]
     }
