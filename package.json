@@ -3,9 +3,9 @@
     "displayName": "Phoenix Framework",
     "homepage": "https://www.phoenixframework.org",
     "description": "Syntax highlighting support for HEEx",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "author": "Marlus Saraiva",
-    "publisher": "msaraiva",
+    "publisher": "phoenixframework",
     "license": "MIT",
     "icon": "images/logo.png",
     "repository": {
