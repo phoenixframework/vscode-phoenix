@@ -12,7 +12,13 @@
       "include": "#html-comment"
     },
     {
+      "include": "#deprecated-heex-comment"
+    },
+    {
       "include": "#heex-comment"
+    },
+    {
+      "include": "#heex-multi-line-comment"
     },
     {
       "include": "#elixir-embedded"
@@ -85,7 +91,7 @@
         }
       ]
     },
-    "heex-comment": {
+    "deprecated-heex-comment": {
       "begin": "<%+#",
       "captures": {
         "0": {
@@ -93,6 +99,26 @@
         }
       },
       "end": "%>",
+      "name": "comment.block.heex"
+    },
+    "heex-comment": {
+      "begin": "<%+ #",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.heex"
+        }
+      },
+      "end": "%>",
+      "name": "comment.block.heex"
+    },
+    "heex-multi-line-comment": {
+      "begin": "<%+!--",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.heex"
+        }
+      },
+      "end": "--%>",
       "name": "comment.block.heex"
     },
     "elixir-embedded": {
