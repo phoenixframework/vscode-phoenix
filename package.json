@@ -8,13 +8,18 @@
     "publisher": "phoenixframework",
     "license": "MIT",
     "icon": "images/logo.png",
+    "main": "./src/extension.js",
+    "activationEvents": [],
     "repository": {
         "type": "git",
         "url": "https://github.com/phoenixframework/vscode-phoenix.git"
     },
     "engines": {
-        "vscode": "^1.25.1"
+        "vscode": "^1.75.0"
     },
+    "extensionDependencies": [
+	    "vscode.html-language-features"
+    ],
     "categories": [
         "Programming Languages"
     ],
@@ -30,6 +35,12 @@
                     ".heex"
                 ],
                 "configuration": "./language-configuration.json"
+            }
+        ],
+        "htmlLanguageParticipants": [
+            {
+                "languageId": "phoenix-heex",
+                "autoInsert": true
             }
         ],
         "grammars": [
