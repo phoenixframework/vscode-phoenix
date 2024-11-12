@@ -13,10 +13,14 @@
         "url": "https://github.com/phoenixframework/vscode-phoenix.git"
     },
     "engines": {
-        "vscode": "^1.25.1"
+        "vscode": "^1.95.0"
     },
     "categories": [
         "Programming Languages"
+    ],
+    "main": "./out/commands/extension.js",
+    "activationEvents": [
+        "onLanguage:elixir"
     ],
     "contributes": {
         "languages": [
@@ -48,6 +52,24 @@
                     "text.html.heex": "phoenix-heex"
                 }
             }
+        ],
+        "commands": [
+            {
+                "command": "phoenixFunctionNavigator.goToDefinition",
+                "title": "Go to Component Definition"
+            },
+            {
+                "command": "phoenixFunctionNavigator.goToReference",
+                "title": "Go to Component References"
+            }
         ]
+    },
+    "scripts": {
+        "watch": "tsc"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.95.0",
+        "path": "^0.12.7",
+        "typescript": "^5.6.3"
     }
 }
