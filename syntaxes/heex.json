@@ -1,9 +1,7 @@
 {
   "name": "heex",
   "scopeName": "source.heex",
-  "fileTypes": [
-    "heex"
-  ],
+  "fileTypes": ["heex"],
   "patterns": [
     {
       "include": "#doctype"
@@ -22,6 +20,9 @@
     },
     {
       "include": "#elixir-embedded"
+    },
+    {
+      "include": "#elixir-curly-embedded"
     },
     {
       "include": "#slotable"
@@ -138,6 +139,30 @@
             }
           },
           "match": "(#).*?(?=-?%>)",
+          "name": "comment.line.number-sign.elixir"
+        },
+        {
+          "include": "source.elixir"
+        }
+      ]
+    },
+    "elixir-curly-embedded": {
+      "begin": "\\{",
+      "captures": {
+        "0": {
+          "name": "punctuation.section.embedded.elixir"
+        }
+      },
+      "end": "\\}",
+      "name": "source.elixir.embedded",
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.comment.elixir"
+            }
+          },
+          "match": "(#).*?(?=\\})",
           "name": "comment.line.number-sign.elixir"
         },
         {
