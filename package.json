@@ -48,6 +48,11 @@
                     "text.html.heex": "phoenix-heex"
                 }
             }
-        ]
+        ],
+        "configurationDefaults": {
+            "[phoenix-heex]": {
+                "editor.defaultFoldingRangeProvider": "vscode.html-language-features"
+            }
+        }
     }
 }
