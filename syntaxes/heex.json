@@ -24,6 +24,9 @@
       "include": "#elixir-embedded"
     },
     {
+      "include": "#tag-no-curly"
+    },
+    {
       "include": "#slotable"
     },
     {
@@ -37,6 +40,9 @@
     },
     {
       "include": "#tag"
+    },
+    {
+      "include": "#interpolation"
     }
   ],
   "repository": {
@@ -164,6 +170,88 @@
           "patterns": [
             {
               "include": "#expression"
+            }
+          ]
+        }
+      ]
+    },
+    "tag-no-curly": {
+      "name": "meta.element.tag.with-no-curly-interpolation",
+      "contentName": "meta.tag.content.with-no-curly-interpolation",
+      "begin": "(<)([A-Za-z0-9\\-:.]+)(?=[^>]*\\bphx-no-curly-interpolation\\b)([^>]*)>",
+      "beginCaptures": {
+        "0": {
+          "patterns": [
+            {
+              "include": "#slotable"
+            },
+            {
+              "include": "#component"
+            },
+            {
+              "include": "#tag-style"
+            },
+            {
+              "include": "#tag-script"
+            },
+            {
+              "include": "#tag"
+            }
+          ]
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#node-attributes"
+            }
+          ]
+        }
+      },
+      "end": "(</)(\\2)(>)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.tag.content.with-no-curly-interpolation",
+          "patterns": [
+            {
+              "include": "#html-comment"
+            },
+            {
+              "include": "#deprecated-heex-comment"
+            },
+            {
+              "include": "#heex-comment"
+            },
+            {
+              "include": "#heex-multi-line-comment"
+            },
+            {
+              "include": "#elixir-embedded"
+            },
+            {
+              "include": "#slotable"
+            },
+            {
+              "include": "#component"
+            },
+            {
+              "include": "#tag-style"
+            },
+            {
+              "include": "#tag-script"
+            },
+            {
+              "include": "#tag"
             }
           ]
         }
