@@ -1,9 +1,7 @@
 {
   "name": "heex",
   "scopeName": "source.heex",
-  "fileTypes": [
-    "heex"
-  ],
+  "fileTypes": ["heex"],
   "patterns": [
     {
       "include": "#doctype"
@@ -37,6 +35,9 @@
     },
     {
       "include": "#tag"
+    },
+    {
+      "include": "#interpolation"
     }
   ],
   "repository": {
