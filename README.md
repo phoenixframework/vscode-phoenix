@@ -9,11 +9,12 @@ Syntax highlighting support for Phoenix templates.
 
 ## Emmet Support 
 
-To use emmet with `.heex` file extensions, include the options below in your settings:
+To use emmet with `.heex` file extensions and inside `~H` sigils, include the options below in your settings:
 
 ```json
 "emmet.includeLanguages": {
-  "phoenix-heex": "html"
+  "phoenix-heex": "html",
+  "elixir": "html"
 }
 ```
 
