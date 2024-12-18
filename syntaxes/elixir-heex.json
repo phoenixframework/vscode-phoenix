@@ -11,7 +11,7 @@
           "name": "string.quoted.double.heredoc.elixir"
         }
       },
-      "end": "^\\s*(\"\"\"[a-z]*)$",
+      "end": "^\\s*(\"\"\"[a-z]*)",
       "endCaptures": {
         "0": {
           "name": "string.quoted.double.heredoc.elixir"
